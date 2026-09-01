@@ -16,7 +16,6 @@ public class Product {
     private int amountSold;
 
     public int getId() {
-
         return id;
     }
 

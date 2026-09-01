@@ -7,7 +7,7 @@ import java.util.List;
 
 @Service
 public class ProductService{
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
     //dependency injection
     public ProductService(ProductRepository productRepository) {
@@ -53,8 +53,13 @@ public class ProductService{
 
     //delete
 
-    public void deleteProduct(ProductRequestDTO product){
-
+    public void deleteProduct(int id){
+        List<Product> products = productRepository.findAll();
+        for(Product p : products){
+            if(p.getId() == id){
+                productRepository.delete(p);
+            }
+        }
     }
 
 }

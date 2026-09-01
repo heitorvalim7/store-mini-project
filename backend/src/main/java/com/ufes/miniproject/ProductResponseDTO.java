@@ -1,5 +1,5 @@
 package com.ufes.miniproject;
 
-public record ProductResponseDTO(Integer id, String name, double price, Integer amountInStore) {
+public record ProductResponseDTO(Integer id, String name, Double price, Integer amountInStore) {
 
 }
