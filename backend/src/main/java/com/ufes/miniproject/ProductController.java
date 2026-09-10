@@ -5,6 +5,7 @@ import java.util.List;
 
 @RestController //tells Spring that it will receive web requests and its responses will be JSON, not web pages
 @RequestMapping("/products") //it specifies that any method inside this class will only be triggered if the accessed URL ends with /products.
+@CrossOrigin(origins = "http://localhost:4200")
 public class ProductController {
     private final ProductService productService;
 

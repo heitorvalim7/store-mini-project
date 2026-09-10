@@ -46,6 +46,7 @@ public class ProductService{
                 p.setName(updateData.name());
                 p.setPrice(updateData.price());
                 p.setAmountInStorage(updateData.amountInStore());
+                productRepository.save(p);
             }
         }
 
