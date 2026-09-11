@@ -63,4 +63,13 @@ public class ProductService{
         }
     }
 
+    public List<ProductResponseDTO> getProductByName(String name){
+        List<ProductResponseDTO> list = new ArrayList<>();
+        List<Product> products = productRepository.findByNameContainingIgnoreCase(name);
+        for(Product p : products){
+            list.add(new ProductResponseDTO(p.getId(), p.getName(), p.getPrice(), p.getAmountInStorage()));
+        }
+        return list;
+    }
+
 }

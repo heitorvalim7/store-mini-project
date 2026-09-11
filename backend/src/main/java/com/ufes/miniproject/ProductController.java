@@ -34,4 +34,9 @@ public class ProductController {
         productService.deleteProduct(id);
     }
 
+    @GetMapping ("/search")
+    public List<ProductResponseDTO> getProductsByName(@RequestParam String name){
+        return productService.getProductByName(name);
+    }
+
 }
