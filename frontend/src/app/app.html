@@ -1,5 +1,19 @@
-<ul>
-  @for (item of products; track item.id) {
-    <li>{{ item.nome }}</li>
-  }
-</ul>
+<main class="container">
+  <h1>Catálogo de Produtos - {{ title() }}</h1>
+
+  <div class="product-list">
+    <!-- @for iterates over the 'products' array that you populated in ngOnInit -->
+    @for (product of products; track product.id) {
+      <div class="product-card">
+        <h3>{{ product.name }}</h3>
+        <p>Price: $ {{ product.price }}</p>
+        <p>In storage: {{ product.amountInStore }} un</p>
+      </div>
+    } @empty {
+      <!-- this block appears if the array is empty -->
+      <p>No product available.</p>
+    }
+  </div>
+</main>
+
+<router-outlet></router-outlet>
