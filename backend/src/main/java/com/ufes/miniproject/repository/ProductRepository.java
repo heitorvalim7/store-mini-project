@@ -1,6 +1,8 @@
-package com.ufes.miniproject;
+package com.ufes.miniproject.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ufes.miniproject.model.Product;
 
 import java.util.List;
 

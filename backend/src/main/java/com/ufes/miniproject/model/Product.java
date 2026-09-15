@@ -1,4 +1,4 @@
-package com.ufes.miniproject;
+package com.ufes.miniproject.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

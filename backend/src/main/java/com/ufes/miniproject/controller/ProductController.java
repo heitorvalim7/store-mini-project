@@ -1,5 +1,9 @@
-package com.ufes.miniproject;
+package com.ufes.miniproject.controller;
 import org.springframework.web.bind.annotation.*;
+import com.ufes.miniproject.*;
+import com.ufes.miniproject.dtos.ProductRequestDTO;
+import com.ufes.miniproject.dtos.ProductResponseDTO;
+import com.ufes.miniproject.service.ProductService;
 
 import java.util.List;
 

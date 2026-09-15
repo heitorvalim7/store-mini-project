@@ -1,6 +1,11 @@
-package com.ufes.miniproject;
+package com.ufes.miniproject.service;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
+
+import com.ufes.miniproject.dtos.ProductRequestDTO;
+import com.ufes.miniproject.dtos.ProductResponseDTO;
+import com.ufes.miniproject.model.Product;
+import com.ufes.miniproject.repository.ProductRepository;
 
 import java.util.ArrayList;
 import java.util.List;
